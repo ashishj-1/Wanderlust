@@ -16,12 +16,26 @@
 
     /* Cards */
     .listing-card {
+        width: 100%; /* Full width for each card on mobile */
         margin-bottom: 1rem; /* Reduce margin between cards */
+        text-align: center; /* Center text */
+        padding: 10px; /* Add padding for space */
     }
 
     /* Image resizing */
-    .show-img {
-        height: 20vh; /* Adjust image height on smaller screens */
+    .listing-card img {
+        width: 100%; /* Ensure the image takes full width of the card */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Crop to fit container */
+        margin-bottom: 10px; /* Space between image and text */
+    }
+
+    /* Text below images */
+    .listing-card p {
+        font-size: 0.8rem; /* Smaller font size for text */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Handle long text with ellipsis */
     }
 
     /* Map */
@@ -35,12 +49,25 @@
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     /* Adjust card layout for tablet */
     .listing-card {
+        width: 48%; /* Two cards side by side */
         margin-bottom: 1.5rem; /* Reduce spacing between cards */
+        text-align: center;
     }
 
     /* Navbar */
     .navbar {
         height: 4.5rem; /* Slightly smaller navbar on tablets */
+    }
+
+    /* Image resizing */
+    .listing-card img {
+        width: 100%; /* Ensure image scales with card */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Text below images */
+    .listing-card p {
+        font-size: 0.9rem; /* Adjust font size */
     }
 
     /* Map */
@@ -52,13 +79,22 @@
 
 /* Desktop Screen */
 @media only screen and (min-width: 1025px) {
-    /* You can keep default styles for desktop or make any specific adjustments */
-    .navbar {
-        height: 5rem;
+    /* Cards */
+    .listing-card {
+        width: 23%; /* Show multiple cards per row on large screens */
+        margin-bottom: 2rem; /* Space between cards */
+        text-align: center; /* Align text centrally */
     }
 
-    .listing-card {
-        margin-bottom: 2rem;
+    /* Image resizing */
+    .listing-card img {
+        width: 100%; /* Ensure the image takes full width of the card */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Text below images */
+    .listing-card p {
+        font-size: 1rem; /* Normal font size */
     }
 
     /* Footer */
@@ -71,4 +107,29 @@
         width: 80vh;
         height: 300px;
     }
+}
+
+/* General Styles */
+
+/* Flexbox layout for listing container */
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards to next line when screen gets smaller */
+    justify-content: space-around;
+}
+
+/* Listing card common style */
+.listing-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Default style for images inside cards */
+.listing-card img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
 }
