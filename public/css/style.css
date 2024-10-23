@@ -1,127 +1,74 @@
-body {
-  font-family: "Plus Jakarta Sans", sans-serif !important;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+/* General mobile-first styling */
+
+/* Phone Screen */
+@media only screen and (max-width: 600px) {
+    /* Navbar */
+    .navbar {
+        height: 4rem; /* Reduce the navbar height */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    /* Footer */
+    .f-info-links, .f-info-socials, .f-info-brands {
+        flex-direction: column; /* Stack the footer links vertically */
+        text-align: center;
+    }
+
+    /* Cards */
+    .listing-card {
+        margin-bottom: 1rem; /* Reduce margin between cards */
+    }
+
+    /* Image resizing */
+    .show-img {
+        height: 20vh; /* Adjust image height on smaller screens */
+    }
+
+    /* Map */
+    #map {
+        width: 100%; /* Full width for smaller screens */
+        height: 250px; /* Adjust map height */
+    }
 }
 
-.container {
-    flex: 1;
+/* Tablet Screen */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Adjust card layout for tablet */
+    .listing-card {
+        margin-bottom: 1.5rem; /* Reduce spacing between cards */
+    }
+
+    /* Navbar */
+    .navbar {
+        height: 4.5rem; /* Slightly smaller navbar on tablets */
+    }
+
+    /* Map */
+    #map {
+        width: 60vh; /* Adjust map width for tablets */
+        height: 280px;
+    }
 }
 
-.navbar {
-    height: 5rem;
-    background-color: white;
-}
+/* Desktop Screen */
+@media only screen and (min-width: 1025px) {
+    /* You can keep default styles for desktop or make any specific adjustments */
+    .navbar {
+        height: 5rem;
+    }
 
-.fa-compass {
-    color: #fe424d;
-    font-size: 2rem;
-}
+    .listing-card {
+        margin-bottom: 2rem;
+    }
 
-.nav-link {
-    color: #222222 !important;
-}
+    /* Footer */
+    .f-info-links, .f-info-socials, .f-info-brands {
+        flex-direction: row; /* Footer links in a row on larger screens */
+    }
 
-/* Footer */
-.f-info-links a {
-    text-decoration: none;
-    color: #222222;
-}
-
-.f-info-links a:hover {
-    text-decoration: underline;
-}
-
-.f-info-links, .f-info-socials, .f-info-brands {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.f-info-socials i {
-    margin-right: 1rem;
-    font-size: 1.2rem;
-}
-
-.f-info {
-    text-align: center;
-    height: 8rem;
-    background-color: #ebebeb;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: space-evenly;
-}
-
-/* Cards */
-.listing-card {
-    border: none !important;
-    margin-bottom: 2rem;
-}
-
-.card-img-top {
-    border-radius: 1rem !important;
-    width: 100% !important;
-    object-fit: cover !important;
-}
-
-.card-body {
-    padding: 0 !important;
-}
-
-.card-text p {
-    font-weight: 400 !important;
-}
-
-.listing-link {
-    text-decoration: none;
-}
-
-/* Card Effect */
-.card-img-overlay {
-    opacity: 0;
-}
-
-.card-img-overlay:hover {
-    opacity: 0.2;
-    background-color: white;
-}
-
-/* New Page */
-.add-btn {
-    background-color: #fe424d !important;
-    border: none;
-}
-
-.edit-btn {
-    background-color: #fe424d !important;
-    border: none;
-}
-
-.dlt-btn {
-    background-color: #222222 !important;
-    border: none;
-}
-
-/* Show page */
-
-.show-img {
-    height: 30vh;
-}
-
-.btns {
-    display: flex;
-}
-
-.show-card {
-    padding-left: 0;
-    padding-right: 0;
-} 
-
-/* Map */
-#map {
-    height: 300px;
-    width: 80vh;
+    /* Map */
+    #map {
+        width: 80vh;
+        height: 300px;
+    }
 }
