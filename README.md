@@ -24,7 +24,7 @@ It allows users to register, log in, create listings, leave reviews, and explore
 
 | Layer             | Technology                             |
 |------------------|-----------------------------------------|
-| Frontend          | EJS, CSS, Bootstrap                    |
+| Frontend          | JavaScript, EJS, CSS, Bootstrap        |
 | Backend           | Node.js, Express.js                    |
 | Database          | MongoDB Atlas                          |
 | Authentication    | Passport.js, express-session           |
