@@ -127,8 +127,6 @@ You can use **Postman** to test all the main API routes.
 | POST   | `/listings/:id/reviews`      | Add a review      |
 | DELETE | `/listings/:id/reviews/:rid` | Delete a review   |
 
-> Optional: Attach a Postman collection in the repo for testing ease.
-
 ---
 
 # 📍 Mapbox Integration
@@ -143,7 +141,7 @@ MAPBOX_TOKEN=your_mapbox_access_token
 
 ---
 
-# 📸 Screenshots (Optional)
+# 📸 Screenshots
 
 > Include screenshots of:
 > * Homepage
