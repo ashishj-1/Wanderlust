@@ -3,7 +3,7 @@
 **Wanderlust** is a full-stack travel and property listing web application inspired by Airbnb.
 It allows users to register, log in, create listings, leave reviews, and explore accommodations worldwide — with support for location-based search using Mapbox.
 
-🔗 **Live Website:** [Wanderlust on Render](https://airbnb-clone-97nf.onrender.com/listings)
+🔗 **Live Website:** [Wanderlust on Render](https://wanderlust-bhfj.onrender.com/listings)
 
 ---
 
